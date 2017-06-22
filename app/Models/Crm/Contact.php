@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jwdepetro
- * Date: 6/14/17
- * Time: 6:54 PM
- */
 
-namespace App\Models\Contact;
-
+namespace App\Models\Crm;
 
 
 use App\Models\Model;

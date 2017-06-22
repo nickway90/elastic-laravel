@@ -8,14 +8,22 @@
 
 namespace App\Models;
 
+use Elasticsearch\ClientBuilder;
 
 abstract class Model
 {
+    private $client;
+
     abstract function getIndex();
 
     abstract function getType();
 
     abstract function getFields();
+
+    public function __construct()
+    {
+        $this->client = ClientBuilder::create()->build();
+    }
 
     private function getBody(array $data)
     {
@@ -37,34 +45,34 @@ abstract class Model
     {
         $data = $this->getBody(['body' => $body]);
 
-        return \Elasticsearch::search($data);
+        return $this->client->search($data);
     }
 
     public function create($body)
     {
         $data = $this->getBody(['body' => $this->setFields($body)]);
 
-        return \Elasticsearch::index($data);
+        return $this->client->index($data);
     }
 
     public function read($id)
     {
         $data = $this->getBody(['id' => $id]);
 
-        return \Elasticsearch::get($data);
+        return $this->client->get($data);
     }
 
     public function update($id, $body)
     {
         $data = $this->getBody(['id' => $id, 'body' => $this->setFields($body)]);
 
-        return \Elasticsearch::index($data);
+        return $this->client->index($data);
     }
 
     public function destroy($id)
     {
         $data = $this->getBody(['id' => $id]);
 
-        return \Elasticsearch::delete($data);
+        return $this->client->delete($data);
     }
 }

@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'contact', 'namespace' => 'Contact'], function () {
+Route::group(['prefix' => 'contact', 'namespace' => 'Crm'], function () {
 
     Route::post('/', 'ContactController@create');
 
@@ -25,5 +25,17 @@ Route::group(['prefix' => 'contact', 'namespace' => 'Contact'], function () {
 
     Route::delete('/{id}', 'ContactController@destroy');
 
+});
+
+Route::group(['prefix' => 'address', 'namespace' => 'Crm'], function () {
+
+    Route::post('/', 'AddressController@create');
+
+    Route::get('/{id?}', 'AddressController@read');
+
+    Route::put('/{id}', 'AddressController@update');
+
+    Route::delete('/{id}', 'AddressController@destroy');    
+    
 });
 
