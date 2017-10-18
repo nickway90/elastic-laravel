@@ -1,0 +1,33 @@
+[2017-06-21T20:26:58,352][INFO ][o.e.n.Node               ] [OjXxzhp] stopping ...
+[2017-06-21T20:26:58,488][INFO ][o.e.n.Node               ] [OjXxzhp] stopped
+[2017-06-21T20:26:58,488][INFO ][o.e.n.Node               ] [OjXxzhp] closing ...
+[2017-06-21T20:26:58,512][INFO ][o.e.n.Node               ] [OjXxzhp] closed
+[2017-06-21T20:38:04,976][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-06-21T20:38:05,096][INFO ][o.e.e.NodeEnvironment    ] [OjXxzhp] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [203.6gb], net total_space [464.7gb], spins? [unknown], types [hfs]
+[2017-06-21T20:38:05,097][INFO ][o.e.e.NodeEnvironment    ] [OjXxzhp] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-06-21T20:38:05,119][INFO ][o.e.n.Node               ] node name [OjXxzhp] derived from node ID [OjXxzhp_RLSWBEFXf-LndA]; set [node.name] to override
+[2017-06-21T20:38:05,120][INFO ][o.e.n.Node               ] version[5.4.1], pid[48750], build[2cfe0df/2017-05-29T16:05:51.443Z], OS[Mac OS X/10.12.5/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_60/25.60-b23]
+[2017-06-21T20:38:05,120][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+DisableExplicitGC, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/jwdepetro/Source/elasticsearch-5.4.1]
+[2017-06-21T20:38:06,090][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [aggs-matrix-stats]
+[2017-06-21T20:38:06,090][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [ingest-common]
+[2017-06-21T20:38:06,090][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [lang-expression]
+[2017-06-21T20:38:06,090][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [lang-groovy]
+[2017-06-21T20:38:06,091][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [lang-mustache]
+[2017-06-21T20:38:06,091][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [lang-painless]
+[2017-06-21T20:38:06,091][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [percolator]
+[2017-06-21T20:38:06,091][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [reindex]
+[2017-06-21T20:38:06,091][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [transport-netty3]
+[2017-06-21T20:38:06,091][INFO ][o.e.p.PluginsService     ] [OjXxzhp] loaded module [transport-netty4]
+[2017-06-21T20:38:06,092][INFO ][o.e.p.PluginsService     ] [OjXxzhp] no plugins loaded
+[2017-06-21T20:38:07,953][INFO ][o.e.d.DiscoveryModule    ] [OjXxzhp] using discovery type [zen]
+[2017-06-21T20:38:08,549][INFO ][o.e.n.Node               ] initialized
+[2017-06-21T20:38:08,550][INFO ][o.e.n.Node               ] [OjXxzhp] starting ...
+[2017-06-21T20:38:08,850][INFO ][o.e.t.TransportService   ] [OjXxzhp] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
+[2017-06-21T20:38:11,916][INFO ][o.e.c.s.ClusterService   ] [OjXxzhp] new_master {OjXxzhp}{OjXxzhp_RLSWBEFXf-LndA}{qGj9xRXJSxCkgVia3-CJtA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-06-21T20:38:11,936][INFO ][o.e.h.n.Netty4HttpServerTransport] [OjXxzhp] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
+[2017-06-21T20:38:11,939][INFO ][o.e.n.Node               ] [OjXxzhp] started
+[2017-06-21T20:38:12,122][INFO ][o.e.g.GatewayService     ] [OjXxzhp] recovered [2] indices into cluster_state
+[2017-06-21T20:38:12,377][INFO ][o.e.c.r.a.AllocationService] [OjXxzhp] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
+[2017-06-21T20:42:48,395][INFO ][o.e.c.m.MetaDataMappingService] [OjXxzhp] [crm/pNS3gXeFTw6ShZuRbYqsig] update_mapping [contact]
+[2017-06-21T21:08:00,910][INFO ][o.e.c.m.MetaDataMappingService] [OjXxzhp] [.kibana/ogQSzYYnQVWNBAS06KmOhg] create_mapping [search]
+[2017-06-21T21:37:25,254][INFO ][o.e.c.m.MetaDataMappingService] [OjXxzhp] [crm/pNS3gXeFTw6ShZuRbYqsig] create_mapping [address]
