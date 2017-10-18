@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Elasticsearch\Common\Exceptions\Missing404Exception;
+use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -48,6 +49,8 @@ class Handler extends ExceptionHandler
         switch (true) {
             case ($exception instanceof Missing404Exception):
                 return response(null, 404);
+            case ($exception instanceof NoNodesAvailableException):
+                return response(null, 503);
             default:
                 break;
         }

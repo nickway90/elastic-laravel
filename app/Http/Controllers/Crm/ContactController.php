@@ -19,6 +19,10 @@ class ContactController extends Controller
      *     @SWG\Response(
      *         response=200,
      *         description="Contacts"
+     *     ),
+     *     @SWG\Response(
+     *         response=503,
+     *         description="ElasticSearch is not running"
      *     )
      * ),
      * @SWG\Get(
@@ -42,6 +46,10 @@ class ContactController extends Controller
      *     @SWG\Response(
      *         response=404,
      *         description="Contact not found"
+     *     ),
+     *     @SWG\Response(
+     *         response=503,
+     *         description="ElasticSearch is not running"
      *     )
      * ),
      * @SWG\Post(
@@ -62,6 +70,10 @@ class ContactController extends Controller
      *     @SWG\Response(
      *         response=200,
      *         description="Created contact result"
+     *     ),
+     *     @SWG\Response(
+     *         response=503,
+     *         description="ElasticSearch is not running"
      *     )
      * ),
      * @SWG\Put(
@@ -93,6 +105,10 @@ class ContactController extends Controller
      *     @SWG\Response(
      *         response=404,
      *         description="Contact not found"
+     *     ),
+     *     @SWG\Response(
+     *         response=503,
+     *         description="ElasticSearch is not running"
      *     )
      * ),
      * @SWG\Delete(
@@ -116,6 +132,10 @@ class ContactController extends Controller
      *     @SWG\Response(
      *         response=404,
      *         description="Contact not found"
+     *     ),
+     *     @SWG\Response(
+     *         response=503,
+     *         description="ElasticSearch is not running"
      *     )
      * )
      */
