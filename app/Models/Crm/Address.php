@@ -15,31 +15,37 @@ class Address extends Model
      * @var string
      */
     public $contact_id;
+
     /**
      * @SWG\Property()
      * @var string
      */
     public $street_1;
+
     /**
      * @SWG\Property()
      * @var string
      */
     public $street_2;
+
     /**
      * @SWG\Property()
      * @var string
      */
     public $city;
+
     /**
      * @SWG\Property()
      * @var string
      */
     public $state;
+
     /**
      * @SWG\Property()
      * @var string
      */
     public $postal_code;
+    
     /**
      * @SWG\Property()
      * @var string
