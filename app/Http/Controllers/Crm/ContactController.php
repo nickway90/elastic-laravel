@@ -61,7 +61,7 @@ class ContactController extends Controller
      *     consumes={"application/json"},
      *     produces={"application/json"},
      *     @SWG\Parameter(
-     *         description="Customer details",
+     *         description="Contact details",
      *         in="body",
      *         required=true,
      *         name="body",
@@ -92,7 +92,7 @@ class ContactController extends Controller
      *         type="string"
      *     ),
      *     @SWG\Parameter(
-     *         description="Customer details",
+     *         description="Contact details",
      *         in="body",
      *         required=true,
      *         name="body",
