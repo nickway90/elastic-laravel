@@ -18,13 +18,11 @@ abstract class Controller extends BaseController
      */
     private $model;
 
-    abstract function getModel();
+    abstract function getModel(): Model;
 
     public function __construct()
     {
-        $model = $this->getModel();
-
-        $this->model = new $model();
+        $this->model = $this->getModel();
     }
 
     public function create(Request $request)

@@ -8,8 +8,8 @@ use App\Models\Model;
 
 class AddressController extends Controller
 {
-    public function getModel()
+    public function getModel(): Model
     {
-        return Address::class;
+        return new Address();
     }
 }
