@@ -11,9 +11,9 @@ return [
      |
      */
     'supportsCredentials' => false,
-    'allowedOrigins' => ['*'],
+    'allowedOrigins' => ['localhost'],
     'allowedHeaders' => ['*'],
-    'allowedMethods' => ['*'],
+    'allowedMethods' => ['OPTIONS', 'GET', 'POST', 'PUT', 'DELETE'],
     'exposedHeaders' => [],
     'maxAge' => 0,
 ];

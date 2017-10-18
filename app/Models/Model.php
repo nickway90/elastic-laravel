@@ -41,7 +41,7 @@ abstract class Model
         return array_merge($this->getFields(), $data);
     }
 
-    public function search($body = [])
+    public function index($body = [])
     {
         $data = $this->getBody(['body' => $body]);
 

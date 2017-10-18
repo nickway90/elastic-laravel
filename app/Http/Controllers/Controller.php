@@ -40,7 +40,7 @@ abstract class Controller extends BaseController
         }
         else
         {
-            return $this->model->search();
+            return $this->model->index();
         }
     }
 
