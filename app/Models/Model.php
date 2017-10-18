@@ -52,27 +52,68 @@ abstract class Model
     {
         $data = $this->getBody(['body' => $this->setFields($body)]);
 
-        return $this->client->index($data);
+        $response = $this->client->index($data);
+
+        if (isset($response['created'], $response['_id']) && $response['created'])
+        {
+            $data = [
+                'id' => $response['_id']
+            ];
+
+            return response($data, 201);
+        }
+
+        return response(null, 400);
     }
 
     public function read($id)
     {
         $data = $this->getBody(['id' => $id]);
 
-        return $this->client->get($data);
+        $response = $this->client->get($data);
+
+        if (isset($response['found'], $response['_source'], $response['_id'], $response['_source']) && $response['found'])
+        {
+            $data = [
+                'id' => $response['_id']
+            ];
+
+            foreach ($this->getFields() as $key => $value)
+            {
+                $data[$key] = $response['_source'][$key];
+            }
+
+            return response($data, 200);
+        }
+
+        return response(null, 404);
     }
 
     public function update($id, $body)
     {
         $data = $this->getBody(['id' => $id, 'body' => $this->setFields($body)]);
 
-        return $this->client->index($data);
+        $response = $this->client->index($data);
+
+        if (isset($response['result']) && $response['result'] === 'updated')
+        {
+            return $this->read($id);
+        }
+
+        return response(null, 400);
     }
 
     public function destroy($id)
     {
         $data = $this->getBody(['id' => $id]);
 
-        return $this->client->delete($data);
+        $response = $this->client->delete($data);
+
+        if (isset($response['result']) && $response['result'] === 'deleted')
+        {
+            return response(null, 200);
+        }
+
+        return response(null, 400);
     }
 }

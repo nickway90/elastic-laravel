@@ -45,7 +45,7 @@ class Address extends Model
      * @var string
      */
     public $postal_code;
-    
+
     /**
      * @SWG\Property()
      * @var string

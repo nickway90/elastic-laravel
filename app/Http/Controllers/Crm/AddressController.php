@@ -44,6 +44,10 @@ class AddressController extends Controller
      *         description="Address details"
      *     ),
      *     @SWG\Response(
+     *         response=400,
+     *         description="Error querying the address"
+     *     ),
+     *     @SWG\Response(
      *         response=404,
      *         description="Address not found"
      *     ),
@@ -68,8 +72,12 @@ class AddressController extends Controller
      *         @SWG\Schema(ref="#/definitions/Address")
      *     ),
      *     @SWG\Response(
-     *         response=200,
+     *         response=201,
      *         description="Created address result"
+     *     ),
+     *     @SWG\Response(
+     *         response=400,
+     *         description="Error creating the address"
      *     ),
      *     @SWG\Response(
      *         response=503,
@@ -92,7 +100,7 @@ class AddressController extends Controller
      *         type="string"
      *     ),
      *     @SWG\Parameter(
-     *         description="Customer details",
+     *         description="Address details",
      *         in="body",
      *         required=true,
      *         name="body",
@@ -101,6 +109,10 @@ class AddressController extends Controller
      *     @SWG\Response(
      *         response=200,
      *         description="Updated address result"
+     *     ),
+     *     @SWG\Response(
+     *         response=400,
+     *         description="Error updating the address"
      *     ),
      *     @SWG\Response(
      *         response=404,
@@ -128,6 +140,10 @@ class AddressController extends Controller
      *     @SWG\Response(
      *         response=200,
      *         description="Address delete response"
+     *     ),
+     *     @SWG\Response(
+     *         response=400,
+     *         description="Error deleting the address"
      *     ),
      *     @SWG\Response(
      *         response=404,

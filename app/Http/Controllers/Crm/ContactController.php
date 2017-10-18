@@ -44,6 +44,10 @@ class ContactController extends Controller
      *         description="Contact details"
      *     ),
      *     @SWG\Response(
+     *         response=400,
+     *         description="Error querying the contact"
+     *     ),
+     *     @SWG\Response(
      *         response=404,
      *         description="Contact not found"
      *     ),
@@ -68,8 +72,12 @@ class ContactController extends Controller
      *         @SWG\Schema(ref="#/definitions/Contact")
      *     ),
      *     @SWG\Response(
-     *         response=200,
+     *         response=201,
      *         description="Created contact result"
+     *     ),
+     *     @SWG\Response(
+     *         response=400,
+     *         description="Error creating the contact"
      *     ),
      *     @SWG\Response(
      *         response=503,
@@ -103,6 +111,10 @@ class ContactController extends Controller
      *         description="Updated contact result"
      *     ),
      *     @SWG\Response(
+     *         response=400,
+     *         description="Error updating the contact"
+     *     ),
+     *     @SWG\Response(
      *         response=404,
      *         description="Contact not found"
      *     ),
@@ -128,6 +140,10 @@ class ContactController extends Controller
      *     @SWG\Response(
      *         response=200,
      *         description="Contact delete response"
+     *     ),
+     *     @SWG\Response(
+     *         response=400,
+     *         description="Error deleting the contact"
      *     ),
      *     @SWG\Response(
      *         response=404,
